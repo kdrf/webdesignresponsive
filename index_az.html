@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="az" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kənan - İstifadəçi mərkəzli rəqəmsal təcrübələr yaradan UX/UI Dizayner və Frontend Developer">
+    <meta name="keywords" content="UX dizayn, UI dizayn, istifadəçi təcrübəsi, istifadəçi interfeysi, frontend development, portfolio, Figma, Adobe XD">
+    <meta property="og:title" content="Kənan - UX/UI Dizayner və Frontend Developer">
+    <meta property="og:description" content="İnnovativ UX/UI dizayn həlləri və frontend development layihələrini nümayiş etdirən portfolio">
+    <meta property="og:type" content="website">
+    <title>Kənan - UX/UI Dizayner və Frontend Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Ana Səhifə">Kənan</a>
+            <nav class="nav" role="navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Ana Səhifə</a></li>
+                    <li><a href="#about" class="nav-link">Haqqımda</a></li>
+                    <li><a href="#projects" class="nav-link">Layihələr</a></li>
+                    <li><a href="#contact" class="nav-link">Əlaqə</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Qaranlıq Rejimi Dəyişdir">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-selector" role="navigation" aria-label="Dil Seçimi">
+                    <button class="language-toggle" aria-expanded="false" aria-controls="language-menu" aria-label="Cari dil: Azərbaycan dili">
+                        <span class="current-lang">
+                            <span class="lang-code">AZ</span>
+                            <span class="lang-name">Azərbaycan dili</span>
+                        </span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul id="language-menu" class="language-menu" role="menu">
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="en" aria-selected="false" onclick="window.location.href='index.html'">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                        </li>
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="tr" aria-selected="false" onclick="window.location.href='index_tr.html'">
+                                <span class="lang-code">TR</span>
+                                <span class="lang-name">Türkçe</span>
+                            </button>
+                        </li>
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="az" aria-selected="true">
+                                <span class="lang-code">AZ</span>
+                                <span class="lang-name">Azərbaycan dili</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="hamburger" aria-label="Menyunu Aç/Bağla">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Salam, Mən</span>
+                <h1 class="hero-title">
+                    <span>Kənan</span>
+                </h1>
+                <div class="hero-roles">
+                    <span id="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    İstifadəçi araşdırması, iterativ dizayn və təmiz kod vasitəsilə real problemləri həll edən 
+                    istifadəçi mərkəzli rəqəmsal təcrübələr yaradıram.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Layihələrə Bax</a>
+                    <a href="#process" class="btn btn-outline">Prosesim</a>
+                </div>
+                <div class="hero-quote">
+                    <p>"When code is simple, usability shines."</p>
+                    <cite>Frontend Development Philosophy</cite>
+                </div>
+            </div>
+
+            <div class="hero-illustration">
+                <div class="avatar-container">
+                    <img src="assets/avatar.png" alt="Frontend Developer Avatar" loading="lazy">
+                </div>
+                <div class="floating-icons">
+                    <div class="tech-icon">
+                        <img src="assets/icons/react.svg" alt="React" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/figma.svg" alt="Figma" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/javascript.svg" alt="JavaScript" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/html5.svg" alt="HTML5" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/css3.svg" alt="CSS3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Kəşf etmək üçün sürüşdür</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="featured-projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Seçilmiş İşlər</h2>
+            <div class="featured-grid">
+                <!-- Featured Project 1 -->
+                <article class="featured-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="assets/projects/project1.jpg" alt="E-ticarət Tətbiqinin Yenidən Dizaynı">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light">Keys Araşdırmasına Bax</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-ticarət Tətbiqinin Yenidən Dizaynı</h3>
+                        <p>Araşdırmaya əsaslanan dizayn qərarları ilə istifadəçi təcrübəsi və konversiya nisbətlərini təkmilləşdirdik.</p>
+                        <div class="project-meta">
+                            <div class="tools-used">
+                                <span>Figma</span>
+                                <span>Protopie</span>
+                                <span>React</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+45%</span>
+                                    <span class="metric-label">Konversiya</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">-30%</span>
+                                    <span class="metric-label">Tərk etmə</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2 -->
+                <article class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/projects/project2.jpg" alt="Səhiyyə Platforması UX">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light">Keys Araşdırmasına Bax</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Səhiyyə Platforması UX</h3>
+                        <p>İntuitive interfeys dizaynı ilə xəstə-həkim ünsiyyətini sadələşdirdik.</p>
+                        <div class="project-meta">
+                            <div class="tools-used">
+                                <span>Adobe XD</span>
+                                <span>InVision</span>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+60%</span>
+                                    <span class="metric-label">Məmnuniyyət</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">-25%</span>
+                                    <span class="metric-label">Dəstək Müraciəti</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="/blog" class="btn btn-primary">Bütün Məqalələrə Bax</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section id="process" class="design-process">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Dizayn Prosesim</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">01</div>
+                    <h3>Araşdırma</h3>
+                    <p>Müsahibələr, sorğular və rəqabət analizi ilə istifadəçi ehtiyaclarını başa düşmək.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/miro.svg" alt="Miro">
+                        <img src="assets/tools/notion.svg" alt="Notion">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <h3>Dizayn</h3>
+                    <p>İstifadəçi təcrübəsinə fokuslanaraq wireframe və yüksək keyfiyyətli dizaynlar yaratmaq.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/figma.svg" alt="Figma">
+                        <img src="assets/tools/sketch.svg" alt="Sketch">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <h3>Prototip</h3>
+                    <p>Dizayn həllərini test etmək və təsdiqləmək üçün interaktiv prototiplər yaratmaq.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/protopie.svg" alt="Protopie">
+                        <img src="assets/tools/principle.svg" alt="Principle">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <h3>Tətbiq</h3>
+                    <p>Piksel mükəmməlliyində tətbiq üçün developerlər ilə əməkdaşlıq.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/vscode.svg" alt="VS Code">
+                        <img src="assets/tools/github.svg" alt="GitHub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Müştəri Rəyləri</h2>
+            <div class="swiper testimonials-slider" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Kənanın detallara diqqəti və istifadəçi mərkəzli yanaşması məhsulumuzu tamamilə dəyişdi. Nəticələr özü danışır."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/author1.jpg" alt="Əhməd Məmmədov">
+                            <div class="author-info">
+                                <h4>Əhməd Məmmədov</h4>
+                                <p>Məhsul Meneceri, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Skills -->
+    <section id="tools" class="tools-skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Alətlər və Texnologiyalar</h2>
+            
+            <div class="tools-categories" data-aos="fade-up">
+                <button class="category-tab active" data-category="all">Hamısı</button>
+                <button class="category-tab" data-category="design">Dizayn</button>
+                <button class="category-tab" data-category="development">Development</button>
+                <button class="category-tab" data-category="other">Digər</button>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Design Tools -->
+                <div class="tool-card" data-category="design" data-aos="fade-up">
+                    <div class="tool-icon">
+                        <img src="assets/tools/figma.svg" alt="Figma" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Figma</h3>
+                        <p class="tool-description">UI/UX dizayn, prototipləmə və dizayn sistemləri</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-icon">
+                        <img src="assets/tools/adobe-xd.svg" alt="Adobe XD" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Adobe XD</h3>
+                        <p class="tool-description">İnteraktiv prototiplər və interfeys dizaynı</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="tool-card" data-category="development" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tool-icon">
+                        <img src="assets/tools/vscode.svg" alt="VS Code" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">VS Code</h3>
+                        <p class="tool-description">Kod redaktoru və development mühiti</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="development" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tool-icon">
+                        <img src="assets/tools/react.svg" alt="React" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">React</h3>
+                        <p class="tool-description">İstifadəçi interfeysi kitabxanası</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- Other Tools -->
+                <div class="tool-card" data-category="other" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tool-icon">
+                        <img src="assets/tools/notion.svg" alt="Notion" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Notion</h3>
+                        <p class="tool-description">Layihə idarəetməsi və sənədləşdirmə</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="other" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tool-icon">
+                        <img src="assets/tools/slack.svg" alt="Slack" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Slack</h3>
+                        <p class="tool-description">Komanda əməkdaşlığı və kommunikasiya</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">UX Məqalələri</h2>
+            <div class="blog-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="assets/blog/post1.jpg" alt="UX Araşdırma Metodları">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Araşdırma</span>
+                        <h3>2024-cü il üçün Əsas UX Araşdırma Metodları</h3>
+                        <p>Ən effektiv istifadəçi araşdırma metodlarına hərtərəfli baxış...</p>
+                        <a href="#" class="read-more">Davamını Oxu <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="#blog" class="btn btn-primary">Bütün Məqalələrə Bax</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Əlaqə</h2>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form" data-aos="fade-up">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Adınız">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Email Ünvanınız">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Mesajınız"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Mesaj Göndər
+                    </button>
+                </form>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mənim Portfoliom. HTML, CSS və JavaScript ilə hazırlanıb</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Yuxarı Qayıt">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modal Template -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
+            <div id="modal-images" class="modal-images"></div>
+            <div id="modal-tech" class="project-tech"></div>
+            <div class="modal-links"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-wrapper">
+                <!-- About Header -->
+                <div class="about-header">
+                    <h2>Haqqımda</h2>
+                    <h3>Kənan</h3>
+                    <p class="title">UI/UX Dizayner və Frontend Developer</p>
+                </div>
+
+                <!-- Bio -->
+                <div class="about-bio">
+                    <p>Azərbaycanda yerləşən, 5+ illik təcrübəyə malik UI/UX dizayner və frontend developerəm. Yaradıcı dizayn düşüncəsi ilə texniki təcrübəni birləşdirərək istifadəçi mərkəzli, əlçatan və performanslı veb tətbiqlər yaradıram.</p>
+                </div>
+
+                <!-- Experience -->
+                <div class="about-experience">
+                    <h3>İş Təcrübəsi</h3>
+                    <div class="experience-item">
+                        <h4>Senior Frontend Developer</h4>
+                        <p class="company">Tech Solutions Inc. | 2021 - İndiyədək</p>
+                        <ul>
+                            <li>Müəssisə veb tətbiqlərinin frontend inkişafına rəhbərlik</li>
+                            <li>Responsiv dizaynların tətbiqi və performansın optimallaşdırılması</li>
+                            <li>Junior developerlərin mentorluğu və kod nəzərdən keçirmələri</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>UI/UX Dizayner</h4>
+                        <p class="company">Creative Agency | 2019 - 2021</p>
+                        <ul>
+                            <li>Mobil və veb tətbiqlər üçün istifadəçi interfeyslərinin dizaynı</li>
+                            <li>İstifadəçi araşdırması və istifadəlilik testləri</li>
+                            <li>İnteraktiv prototiplər və dizayn sistemlərinin yaradılması</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="about-skills">
+                    <h3>Bacarıqlar</h3>
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Development</h4>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Dizayn</h4>
+                            <ul>
+                                <li>UI/UX Dizayn</li>
+                                <li>Figma</li>
+                                <li>Adobe XD</li>
+                                <li>Prototyping</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Alətlər</h4>
+                            <ul>
+                                <li>Git</li>
+                                <li>VS Code</li>
+                                <li>Webpack</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

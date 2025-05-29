@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenan - UX/UI Designer and Frontend Developer creating user-centered digital experiences">
+    <meta name="keywords" content="UX design, UI design, user experience, user interface, frontend development, portfolio, Figma, Adobe XD">
+    <meta property="og:title" content="Kenan - UX/UI Designer and Frontend Developer">
+    <meta property="og:description" content="Portfolio showcasing innovative UX/UI design solutions and frontend development projects">
+    <meta property="og:type" content="website">
+    <title>Kenan - UX/UI Designer and Frontend Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Home">Kenan</a>
+            <nav class="nav" role="navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-selector" role="navigation" aria-label="Language Selection">
+                    <button class="language-toggle" aria-expanded="false" aria-controls="language-menu" aria-label="Current language: English">
+                        <span class="current-lang">
+                            <span class="lang-code">EN</span>
+                            <span class="lang-name">English</span>
+                        </span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <ul id="language-menu" class="language-menu" role="menu">
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="en" aria-selected="true">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                        </li>
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="tr" aria-selected="false" onclick="window.location.href='index_tr.html'">
+                                <span class="lang-code">TR</span>
+                                <span class="lang-name">Türkçe</span>
+                            </button>
+                        </li>
+                        <li role="menuitem">
+                            <button class="lang-option" data-lang="az" aria-selected="false" onclick="window.location.href='index_az.html'">
+                                <span class="lang-code">AZ</span>
+                                <span class="lang-name">Azərbaycan dili</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Hi, I'm</span>
+                <h1 class="hero-title">
+                    <span>Kenan</span>
+                </h1>
+                <div class="hero-roles">
+                    <span id="typed-text"></span>
+                </div>
+                <p class="hero-description">
+                    I create user-centered digital experiences that solve real problems through user research, 
+                    iterative design, and clean code.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#process" class="btn btn-outline">My Process</a>
+                </div>
+                <div class="hero-quote">
+                    <p>"When code is simple, usability shines."</p>
+                    <cite>Frontend Development Philosophy</cite>
+                </div>
+            </div>
+
+            <div class="hero-illustration">
+                <div class="avatar-container">
+                    <img src="assets/avatar.png" alt="Frontend Developer Avatar" loading="lazy">
+                </div>
+                <div class="floating-icons">
+                    <div class="tech-icon">
+                        <img src="assets/icons/react.svg" alt="React" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/figma.svg" alt="Figma" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/javascript.svg" alt="JavaScript" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/html5.svg" alt="HTML5" loading="lazy">
+                    </div>
+                    <div class="tech-icon">
+                        <img src="assets/icons/css3.svg" alt="CSS3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="featured-projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Work</h2>
+            <div class="featured-grid">
+                <!-- Featured Project 1 -->
+                <article class="featured-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="assets/projects/project1.jpg" alt="E-commerce App Redesign">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce App Redesign</h3>
+                        <p>Enhanced user experience and conversion rates through research-driven design decisions.</p>
+                        <div class="project-meta">
+                            <div class="tools-used">
+                                <span>Figma</span>
+                                <span>Protopie</span>
+                                <span>React</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+45%</span>
+                                    <span class="metric-label">Conversion</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">-30%</span>
+                                    <span class="metric-label">Bounce Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2 -->
+                <article class="featured-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/projects/project2.jpg" alt="Healthcare Platform UX">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-light">View Case Study</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Healthcare Platform UX</h3>
+                        <p>Simplified patient-doctor communication through intuitive interface design.</p>
+                        <div class="project-meta">
+                            <div class="tools-used">
+                                <span>Adobe XD</span>
+                                <span>InVision</span>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+60%</span>
+                                    <span class="metric-label">Satisfaction</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">-25%</span>
+                                    <span class="metric-label">Support Tickets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="#projects" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section id="process" class="design-process">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Design Process</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">01</div>
+                    <h3>Research</h3>
+                    <p>Understanding user needs through interviews, surveys, and competitive analysis.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/miro.svg" alt="Miro">
+                        <img src="assets/tools/notion.svg" alt="Notion">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <h3>Design</h3>
+                    <p>Creating wireframes and high-fidelity designs with a focus on user experience.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/figma.svg" alt="Figma">
+                        <img src="assets/tools/sketch.svg" alt="Sketch">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <h3>Prototype</h3>
+                    <p>Building interactive prototypes to test and validate design solutions.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/protopie.svg" alt="Protopie">
+                        <img src="assets/tools/principle.svg" alt="Principle">
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <h3>Implementation</h3>
+                    <p>Collaborating with developers for pixel-perfect implementation.</p>
+                    <div class="step-tools">
+                        <img src="assets/tools/vscode.svg" alt="VS Code">
+                        <img src="assets/tools/github.svg" alt="GitHub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Client Testimonials</h2>
+            <div class="swiper testimonials-slider" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Kenan's attention to detail and user-centered approach completely transformed our product. The results speak for themselves."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="assets/testimonials/author1.jpg" alt="Ahmed Mammadov">
+                            <div class="author-info">
+                                <h4>Ahmed Mammadov</h4>
+                                <p>Product Manager, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Skills -->
+    <section id="tools" class="tools-skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tools & Technologies</h2>
+            
+            <div class="tools-categories" data-aos="fade-up">
+                <button class="category-tab active" data-category="all">All</button>
+                <button class="category-tab" data-category="design">Design</button>
+                <button class="category-tab" data-category="development">Development</button>
+                <button class="category-tab" data-category="other">Other</button>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Design Tools -->
+                <div class="tool-card" data-category="design" data-aos="fade-up">
+                    <div class="tool-icon">
+                        <img src="assets/tools/figma.svg" alt="Figma" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Figma</h3>
+                        <p class="tool-description">UI/UX design, prototyping, and design systems</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-icon">
+                        <img src="assets/tools/adobe-xd.svg" alt="Adobe XD" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Adobe XD</h3>
+                        <p class="tool-description">Interactive prototypes and interface design</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="tool-card" data-category="development" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tool-icon">
+                        <img src="assets/tools/vscode.svg" alt="VS Code" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">VS Code</h3>
+                        <p class="tool-description">Code editor and development environment</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="development" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tool-icon">
+                        <img src="assets/tools/react.svg" alt="React" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">React</h3>
+                        <p class="tool-description">User interface library</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+
+                <!-- Other Tools -->
+                <div class="tool-card" data-category="other" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tool-icon">
+                        <img src="assets/tools/notion.svg" alt="Notion" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Notion</h3>
+                        <p class="tool-description">Project management and documentation</p>
+                        <span class="tool-proficiency proficiency-expert">Expert</span>
+                    </div>
+                </div>
+
+                <div class="tool-card" data-category="other" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tool-icon">
+                        <img src="assets/tools/slack.svg" alt="Slack" loading="lazy">
+                    </div>
+                    <div class="tool-info">
+                        <h3 class="tool-name">Slack</h3>
+                        <p class="tool-description">Team collaboration and communication</p>
+                        <span class="tool-proficiency proficiency-intermediate">Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog" class="blog-preview">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">UX Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-image">
+                        <img src="assets/blog/post1.jpg" alt="UX Research Methods">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Research</span>
+                        <h3>Essential UX Research Methods for 2024</h3>
+                        <p>A comprehensive look at the most effective user research methods...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta" data-aos="fade-up">
+                <a href="/blog" class="btn btn-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Contact</h2>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form" data-aos="fade-up">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
+                </form>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. Built with HTML, CSS, and JavaScript</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modal Template -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
+            <div id="modal-images" class="modal-images"></div>
+            <div id="modal-tech" class="project-tech"></div>
+            <div class="modal-links"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-wrapper">
+                <!-- About Header -->
+                <div class="about-header">
+                    <h2>About Me</h2>
+                    <h3>Kenan</h3>
+                    <p class="title">UI/UX Designer & Frontend Developer</p>
+                </div>
+
+                <!-- Bio -->
+                <div class="about-bio">
+                    <p>I'm a UI/UX designer and frontend developer based in Azerbaijan with over 5 years of experience. I combine creative design thinking with technical expertise to create user-centered, accessible, and performant web applications.</p>
+                </div>
+
+                <!-- Experience -->
+                <div class="about-experience">
+                    <h3>Work Experience</h3>
+                    <div class="experience-item">
+                        <h4>Senior Frontend Developer</h4>
+                        <p class="company">Tech Solutions Inc. | 2021 - Present</p>
+                        <ul>
+                            <li>Leading frontend development of enterprise web applications</li>
+                            <li>Implementing responsive designs and optimizing performance</li>
+                            <li>Mentoring junior developers and conducting code reviews</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>UI/UX Designer</h4>
+                        <p class="company">Creative Agency | 2019 - 2021</p>
+                        <ul>
+                            <li>Designing user interfaces for mobile and web applications</li>
+                            <li>Conducting user research and usability testing</li>
+                            <li>Creating interactive prototypes and design systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="about-skills">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Development</h4>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Design</h4>
+                            <ul>
+                                <li>UI/UX Design</li>
+                                <li>Figma</li>
+                                <li>Adobe XD</li>
+                                <li>Prototyping</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Tools</h4>
+                            <ul>
+                                <li>Git</li>
+                                <li>VS Code</li>
+                                <li>Webpack</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
